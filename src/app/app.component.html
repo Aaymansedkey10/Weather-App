@@ -1,0 +1,78 @@
+<section class="weather-app pt-4">
+  <div class="container">
+    <div class="row ">
+      <!-- search input  -->
+      <div class="col-lg-10 col-8 px-lg-0 mb-5">
+        <div class="position-relative">
+          <input type="text" class="form-control" [(ngModel)]="searchValue" placeholder="Find Your Location...">
+          <button class="btn position-absolute top-0 end-0" (click)="clear()"><i class="fa-regular fa-circle-xmark"></i></button>
+        </div>
+      </div>
+      <!-- search button  -->
+      <div class="col-lg-2 col-4 text-end">
+        <button class="btn text-white w-100 btn-search" (click)="weather()">Search</button>
+      </div>
+      <!-- current weather  -->
+      <div class="col-12 col-lg-6 mb-3">
+        <div class="card text-white current-weather">
+          <div class="d-flex align-items-center justify-content-between px-2 rounded-top card-head">
+            <p class="p-0 m-0 fs-5">{{currentDay}}</p>
+            <p class="p-0 m-0 fs-5">{{forecastDate}}</p>
+          </div>
+          <div class="card-body mt-4">
+            <h4 class="card-title">{{country}}</h4>
+            <div class="d-flex align-items-center current-temp-container">
+              <p class="card-text mb-4 fw-bold current-temp">{{currentTemp_c}}°C</p>
+              <img class="card-img-top" [src]="currentConditionIcon" alt="current condition image"/>
+            </div>
+            <p class="card-text mb-0 fs-3 current-condition-text">{{currentConditionText}}</p>
+          </div>
+          <div class="card-footer position-absolute bottom-0 d-flex align-items-center justify-content-between w-100">
+            <p > <i class="fa-solid fa-wind"></i> {{currentVis_Km}} km</p>
+            <p > <i class="fa-solid fa-wind"></i> {{currentWind_kph}} kph</p>
+            <p > <i class="fa-regular fa-compass"></i> {{currentWind_dir}}</p>
+          </div>
+        </div>
+      </div>
+      <!-- next day  -->
+      <div class="col-12 col-lg-6 mb-3">
+        <div class="card text-white next-weather">
+          <div class="text-center px-2 rounded-top card-head">
+            <p class="p-0 m-0 fs-5">{{nextDay}}</p>
+          </div>
+          <div class="card-body mt-4">
+            <img class="card-img-top" [src]="forecastConditionIcon" alt="current condition image"/>
+            <p class="card-text mb-4 fw-bold next-temp">{{forecastDayTemp_c}}°C</p>
+            <p class="card-text mb-0 fs-3 fw-bold next-condition-text">{{forecastConditionText}}</p>
+          </div>
+        </div>
+      </div>
+
+     <!-- tomorrow later day  -->
+      <!-- <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="card text-white next-weather">
+          <div class="text-center px-2 rounded-top card-head">
+            <p class="p-0 m-0 fs-5">{{tomorrowLaterDay}}</p>
+          </div>
+          <div class="card-body mt-4">
+            <img class="card-img-top" [src]="forecastConditionIcon" alt="current condition image"/>
+            <p class="card-text mb-4 fw-bold next-temp">{{forecastMaxTemp_c}}°C</p>
+            <p class="card-text mb-0 fs-3 fw-bold next-condition-text">{{forecastConditionText}}</p>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+  <!-- footer  -->
+   <div class="col-12">
+     <footer class="bg-dark text-white text-center text-lg-start">
+       <!-- Copyright -->
+       <div class="text-center p-3">
+         © 2024 Copyright:
+         <a class="text-decoration-none text-white fw-bold" href="https://github.com/Aaymansedkey10">AaymanSedkey10</a>
+       </div>
+       <!-- Copyright -->
+     </footer>
+   </div>
+</section>
