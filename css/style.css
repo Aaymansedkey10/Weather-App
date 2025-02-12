@@ -1,0 +1,64 @@
+.weather-app {
+    background-image: url(../assets/bg-body.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* height: 100vh; */
+}
+.weather-app .form-control:focus {
+    box-shadow: none;
+    outline: 1px solid transparent;
+    border-color: #206bbb;
+  }
+  .btn-search {
+    background-color: #206bbbd6;
+  }
+  .btn-search:hover {
+    background-color: #206bbb !important;
+  }
+  .btn-check:checked + .btn,
+  .btn.active,
+  .btn.show,
+  .btn:first-child:active,
+  :not(.btn-check) + .btn:active {
+    border-color: transparent;
+  }
+  
+  .weather-app .card {
+    height: 70vh;
+    background-color: #1e202bed;
+    width: 100%;
+  }
+  .weather-app .card .card-head {
+    background-color: #2d303d;
+    border-bottom: 2px solid #206bbb;
+  }
+  .card-footer {
+    border-top: 2px solid #206bbb;
+  }
+.card-img-top {
+    object-fit: none;
+    height: 100px !important;
+    width: 100px !important;
+  }
+  .weather-app .card i,
+  .weather-app .card .current-condition-text,
+  .next-condition-text {
+    color: #206bbb;
+    font-weight: bold;
+  }
+  /* .weather-app .current-weather .card-body .current-temp {
+    font-size: 70px;
+  } */
+  .weather-app h4 {
+    color: #206bbb !important;
+  }
+  .next-weather .card-img-top {
+    object-fit: none;
+    height: 90px !important;
+    width: 100% !important;
+  }
+  /* .next-weather .next-temp {
+    font-size: 60px;
+  } */
+  
